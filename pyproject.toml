@@ -1,0 +1,15 @@
+[project]
+name = "mcp_project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "arxiv>=2.2.0",
+    "mcp>=1.9.0",
+    "nest-asyncio>=1.6.0",
+    "openai>=1.79.0",
+    "python-dotenv>=1.1.0",
+    "yfinance",
+    "streamlit"
+]

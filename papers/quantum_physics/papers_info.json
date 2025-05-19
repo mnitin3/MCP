@@ -1,0 +1,93 @@
+{
+  "quant-ph/0302169v1": {
+    "title": "Nonlinear Dynamics In Quantum Physics -- Quantum Chaos and Quantum Instantons",
+    "authors": [
+      "H. Kr\u00f6ger"
+    ],
+    "summary": "We discuss the recently proposed quantum action - its interpretation, its\nmotivation, its mathematical properties and its use in physics: quantum\nmechanical tunneling, quantum instantons and quantum chaos.",
+    "pdf_url": "http://arxiv.org/pdf/quant-ph/0302169v1",
+    "published": "2003-02-21"
+  },
+  "2406.11613v1": {
+    "title": "Lecture Notes on Quantum Algorithms in Open Quantum Systems",
+    "authors": [
+      "Matteo Carlesso"
+    ],
+    "summary": "These lecture notes aim to provide a clear and comprehensive introduction to\nusing open quantum system theory for quantum algorithms. The main arguments are\nVariational Quantum Algorithms, Quantum Error Correction, Dynamical Decoupling\nand Quantum Error Mitigation.",
+    "pdf_url": "http://arxiv.org/pdf/2406.11613v1",
+    "published": "2024-06-17"
+  },
+  "1212.4177v1": {
+    "title": "Quantum spherical model",
+    "authors": [
+      "I. Lyberg"
+    ],
+    "summary": "We define a \"quantum spherical model\", a quantum lattice model.",
+    "pdf_url": "http://arxiv.org/pdf/1212.4177v1",
+    "published": "2012-12-17"
+  },
+  "1504.03207v1": {
+    "title": "Can classical physics agree with quantum physics on quantum phenomena?",
+    "authors": [
+      "Michele Marrocco"
+    ],
+    "summary": "Classical physics fails where quantum physics prevails. This common\nunderstanding applies to quantum phenomena that are acknowledged to be beyond\nthe reach of classical physics. Here, we make an attempt at weakening this\nsolid belief that classical physics is unfit to explain the quantum world. The\ntrial run is the quantization of the free radiation field that will be\naddressed by following a strategy that is free from operators or\nquantum-mechanical concepts",
+    "pdf_url": "http://arxiv.org/pdf/1504.03207v1",
+    "published": "2015-04-13"
+  },
+  "2208.08064v1": {
+    "title": "The Physics of Quantum Information",
+    "authors": [
+      "John Preskill"
+    ],
+    "summary": "Rapid ongoing progress in quantum information science makes this an apt time\nfor a Solvay Conference focused on The Physics of Quantum Information. Here I\nreview four intertwined themes encompassed by this topic: Quantum computer\nscience, quantum hardware, quantum matter, and quantum gravity. Though the time\nscale for broad practical impact of quantum computation is still uncertain, in\nthe near future we can expect noteworthy progress toward scalable\nfault-tolerant quantum computing, and discoveries enabled by programmable\nquantum simulators. In the longer term, controlling highly complex quantum\nmatter will open the door to profound scientific advances and powerful new\ntechnologies.",
+    "pdf_url": "http://arxiv.org/pdf/2208.08064v1",
+    "published": "2022-08-17"
+  },
+  "cond-mat/0601285v1": {
+    "title": "Topologization of electron liquids with Chern-Simons theory and quantum computation",
+    "authors": [
+      "Zhenghan Wang"
+    ],
+    "summary": "We discuss a nexus among quantum topology, quantum physics and quantum\ncomputing.",
+    "pdf_url": "http://arxiv.org/pdf/cond-mat/0601285v1",
+    "published": "2006-01-13"
+  },
+  "0811.2516v1": {
+    "title": "Operational Quantum Mechanics, Quantum Axiomatics and Quantum Structures",
+    "authors": [
+      "Diederik Aerts"
+    ],
+    "summary": "The role of operational quantum mechanics, quantum axiomatics and quantum\nstructures in general is presented as a contribution to a compendium on quantum\nphysics, its history and philosophy.",
+    "pdf_url": "http://arxiv.org/pdf/0811.2516v1",
+    "published": "2008-11-15"
+  },
+  "1807.11019v1": {
+    "title": "Universal Uncertainty Principle in Different Quantum Theories",
+    "authors": [
+      "C. Huang",
+      "Yong-Chang Huang"
+    ],
+    "summary": "This paper deduces universal uncertainty principle in different quantum\ntheories after about one century of proposing uncertainty principle by\nHeisenberg, i.e., new universal uncertainty principle of any orders of physical\nquantities in quantum physics, overcomes the difficulty that current quantum\ncomputer, quantum communication, quantum control, quantum mechanics and so on\ntheories cannot give exact values of general uncertainty of any orders of\nphysical quantities, further gives all relevant different expressions of the\nuniversal uncertainty principle and their applications. In fact, our studies\nare consistent with current theories and physical factual experiments, e.g.,\nrelevant to hydrogen atom physics experiments. Using the new universal\nuncertainty principle, people can give all applications to atomic physics,\nquantum mechanics, quantum communication, quantum calculations, quantum\ncomputer and so on.",
+    "pdf_url": "http://arxiv.org/pdf/1807.11019v1",
+    "published": "2018-07-29"
+  },
+  "quant-ph/0201082v1": {
+    "title": "Quantum Computers and Quantum Computer Languages: Quantum Assembly Language and Quantum C Language",
+    "authors": [
+      "Stephen Blaha"
+    ],
+    "summary": "We show a representation of Quantum Computers defines Quantum Turing Machines\nwith associated Quantum Grammars. We then create examples of Quantum Grammars.\nLastly we develop an algebraic approach to high level Quantum Languages using\nQuantum Assembly language and Quantum C language as examples.",
+    "pdf_url": "http://arxiv.org/pdf/quant-ph/0201082v1",
+    "published": "2002-01-18"
+  },
+  "quant-ph/0309066v1": {
+    "title": "Probabilistic foundations of quantum mechanics and quantum information",
+    "authors": [
+      "Andrei Khrennikov"
+    ],
+    "summary": "We discuss foundation of quantum mechanics (interpretations, superposition,\nprinciple of complementarity, locality, hidden variables) and quantum\ninformation theory.",
+    "pdf_url": "http://arxiv.org/pdf/quant-ph/0309066v1",
+    "published": "2003-09-08"
+  }
+}

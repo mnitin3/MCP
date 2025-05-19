@@ -1,0 +1,57 @@
+{
+  "2305.04311v2": {
+    "title": "Egglog Python: A Pythonic Library for E-graphs",
+    "authors": [
+      "Saul Shanabrook"
+    ],
+    "summary": "E-graphs have emerged as a versatile data structure with applications in\nsynthesis, optimization, and verification through techniques such as equality\nsaturation. This paper introduces Python bindings for the experimental egglog\nlibrary (previously called egg-smol), which aims to bring the benefits of\ne-graphs to the Python ecosystem. The bindings offer a high-level, Pythonic API\nproviding an accessible and familiar interface for Python users. By integrating\ne-graph techniques with Python, we hope to enable collaboration and innovation\nacross various domains in the scientific computing and machine learning\ncommunities. We discuss the advantages of using Python bindings for both Python\nand existing egg-smol users, as well as possible future directions for\ndevelopment.",
+    "pdf_url": "http://arxiv.org/pdf/2305.04311v2",
+    "published": "2023-05-07"
+  },
+  "2207.05613v1": {
+    "title": "Making Python Code Idiomatic by Automatic Refactoring Non-Idiomatic Python Code with Pythonic Idioms",
+    "authors": [
+      "Zejun Zhang",
+      "Zhenchang Xing",
+      "Xin Xia",
+      "Xiwei Xu",
+      "Liming Zhu"
+    ],
+    "summary": "Compared to other programming languages (e.g., Java), Python has more idioms\nto make Python code concise and efficient. Although pythonic idioms are well\naccepted in the Python community, Python programmers are often faced with many\nchallenges in using them, for example, being unaware of certain pythonic idioms\nor do not know how to use them properly. Based on an analysis of 7,638 Python\nrepositories on GitHub, we find that non-idiomatic Python code that can be\nimplemented with pythonic idioms occurs frequently and widely. Unfortunately,\nthere is no tool for automatically refactoring such non-idiomatic code into\nidiomatic code. In this paper, we design and implement an automatic refactoring\ntool to make Python code idiomatic. We identify nine pythonic idioms by\nsystematically contrasting the abstract syntax grammar of Python and Java. Then\nwe define the syntactic patterns for detecting non-idiomatic code for each\npythonic idiom. Finally, we devise atomic AST-rewriting operations and\nrefactoring steps to refactor non-idiomatic code into idiomatic code. We test\nand review over 4,115 refactorings applied to 1,065 Python projects from\nGitHub, and submit 90 pull requests for the 90 randomly sampled refactorings to\n84 projects. These evaluations confirm the high-accuracy, practicality and\nusefulness of our refactoring tool on real-world Python code. Our refactoring\ntool can be accessed at 47.242.131.128:5000.",
+    "pdf_url": "http://arxiv.org/pdf/2207.05613v1",
+    "published": "2022-07-12"
+  },
+  "1712.00461v1": {
+    "title": "Modern Python at the Large Synoptic Survey Telescope",
+    "authors": [
+      "Tim Jenness"
+    ],
+    "summary": "The LSST software systems make extensive use of Python, with almost all of it\ninitially being developed solely in Python 2. Since LSST will be commissioned\nwhen Python 2 is end-of-lifed it is critical that we have all our code support\nPython 3 before commissioning begins. Over the past year we have made\nsignificant progress in migrating the bulk of the code from the Data Management\nsystem onto Python 3. This paper presents our migration methodology, and the\ncurrent status of the port, with our eventual aim to be running completely on\nPython 3 by early 2018. We also discuss recent modernizations to our Python\ncodebase.",
+    "pdf_url": "http://arxiv.org/pdf/1712.00461v1",
+    "published": "2017-12-01"
+  },
+  "1106.0868v1": {
+    "title": "Python GUI Scripting Interface for Running Atomic Physics Applications",
+    "authors": [
+      "Amani Tahat",
+      "Mofleh Tahat"
+    ],
+    "summary": "We create a Python GUI scripting interface working under Windows in addition\nto (UNIX/Linux). The GUI has been built around the Python open-source\nprogramming language. We use the Python's GUI library that so called Python\nMega Widgets (PMW) and based on Tkinter Python module\n(http://www.freenetpages.co.uk/hp/alan.gauld/tutgui.htm). The new GUI was\nmotivated primarily by the desire of more updated operations, more flexibility\nincorporating future and current improvements in producing atomic data.\nFurthermore it will be useful for a variety of applications of atomic physics,\nplasma physics and astrophysics and will help in calculating various atomic\nproperties.",
+    "pdf_url": "http://arxiv.org/pdf/1106.0868v1",
+    "published": "2011-06-05"
+  },
+  "2005.05996v1": {
+    "title": "Towards Memory Safe Python Enclave for Security Sensitive Computation",
+    "authors": [
+      "Huibo Wang",
+      "Mingshen Sun",
+      "Qian Feng",
+      "Pei Wang",
+      "Tongxin Li",
+      "Yu Ding"
+    ],
+    "summary": "Intel SGX Guard eXtensions (SGX), a hardware-supported trusted execution\nenvironment (TEE), is designed to protect security-sensitive applications.\nHowever, since enclave applications are developed with memory unsafe languages\nsuch as C/C++, traditional memory corruption is not eliminated in SGX. Rust-SGX\nis the first toolkit providing enclave developers with a memory-language.\nHowever, Rust is considered a Systems language and has become the right choice\nfor concurrent applications and web browsers. Many application domains such as\nBig Data, Machine Learning, Robotics, Computer Vision are more commonly\ndeveloped in the python programming language. Therefore, Python application\ndevelopers cannot benefit from secure enclaves like Intel SGX and rust-SGX. To\nfill this gap, we propose Python-SGX, which is a memory-safe SGX SDK providing\nenclave developers a memory-safe Python development environment. The key idea\nis to enable memory-safe Python language in SGX by solving the following key\nchallenges: (1) defining a memory-safe Python interpreter (2)replacing unsafe\nelements of Python interpreter with safe ones,(3) achieving comparable\nperformance to non-enclave Python applications, and (4) not introducing any\nunsafe new code or libraries into SGX. We propose to build Python-SGX with\nPyPy, a Python interpreter written by RPython, which is a subset of Python, and\ntame unsafe parts in PyPy by formal verification, security hardening, and\nmemory safe language. We have implemented python-SGX and tested it with a\nseries of benchmarks programs. Our evaluation results show that Python-SGX does\nnot cause significant overhead.",
+    "pdf_url": "http://arxiv.org/pdf/2005.05996v1",
+    "published": "2020-05-12"
+  }
+}

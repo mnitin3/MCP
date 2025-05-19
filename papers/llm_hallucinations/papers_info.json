@@ -1,0 +1,48 @@
+{
+  "2505.04847v1": {
+    "title": "Benchmarking LLM Faithfulness in RAG with Evolving Leaderboards",
+    "authors": [
+      "Manveer Singh Tamber",
+      "Forrest Sheng Bao",
+      "Chenyu Xu",
+      "Ge Luo",
+      "Suleman Kazi",
+      "Minseok Bae",
+      "Miaoran Li",
+      "Ofer Mendelevitch",
+      "Renyi Qu",
+      "Jimmy Lin"
+    ],
+    "summary": "Hallucinations remain a persistent challenge for LLMs. RAG aims to reduce\nhallucinations by grounding responses in contexts. However, even when provided\ncontext, LLMs still frequently introduce unsupported information or\ncontradictions. This paper presents our efforts to measure LLM hallucinations\nwith a focus on summarization tasks, assessing how often various LLMs introduce\nhallucinations when summarizing documents. We discuss Vectara's existing LLM\nhallucination leaderboard, based on the Hughes Hallucination Evaluation Model\n(HHEM). While HHEM and Vectara's Hallucination Leaderboard have garnered great\nresearch interest, we examine challenges faced by HHEM and current\nhallucination detection methods by analyzing the effectiveness of these methods\non existing hallucination datasets. To address these limitations, we propose\nFaithJudge, an LLM-as-a-judge approach guided by few-shot human hallucination\nannotations, which substantially improves automated LLM hallucination\nevaluation over current methods. We introduce an enhanced hallucination\nleaderboard centered on FaithJudge, alongside our current hallucination\nleaderboard, enabling more reliable benchmarking of LLMs for hallucinations in\nRAG.",
+    "pdf_url": "http://arxiv.org/pdf/2505.04847v1",
+    "published": "2025-05-07"
+  },
+  "2404.01588v1": {
+    "title": "Hallucination Diversity-Aware Active Learning for Text Summarization",
+    "authors": [
+      "Yu Xia",
+      "Xu Liu",
+      "Tong Yu",
+      "Sungchul Kim",
+      "Ryan A. Rossi",
+      "Anup Rao",
+      "Tung Mai",
+      "Shuai Li"
+    ],
+    "summary": "Large Language Models (LLMs) have shown propensity to generate hallucinated\noutputs, i.e., texts that are factually incorrect or unsupported. Existing\nmethods for alleviating hallucinations typically require costly human\nannotations to identify and correct hallucinations in LLM outputs. Moreover,\nmost of these methods focus on a specific type of hallucination, e.g., entity\nor token errors, which limits their effectiveness in addressing various types\nof hallucinations exhibited in LLM outputs. To our best knowledge, in this\npaper we propose the first active learning framework to alleviate LLM\nhallucinations, reducing costly human annotations of hallucination needed. By\nmeasuring fine-grained hallucinations from errors in semantic frame, discourse\nand content verifiability in text summarization, we propose HAllucination\nDiversity-Aware Sampling (HADAS) to select diverse hallucinations for\nannotations in active learning for LLM finetuning. Extensive experiments on\nthree datasets and different backbone models demonstrate advantages of our\nmethod in effectively and efficiently mitigating LLM hallucinations.",
+    "pdf_url": "http://arxiv.org/pdf/2404.01588v1",
+    "published": "2024-04-02"
+  },
+  "2410.09997v1": {
+    "title": "Collu-Bench: A Benchmark for Predicting Language Model Hallucinations in Code",
+    "authors": [
+      "Nan Jiang",
+      "Qi Li",
+      "Lin Tan",
+      "Tianyi Zhang"
+    ],
+    "summary": "Despite their success, large language models (LLMs) face the critical\nchallenge of hallucinations, generating plausible but incorrect content. While\nmuch research has focused on hallucinations in multiple modalities including\nimages and natural language text, less attention has been given to\nhallucinations in source code, which leads to incorrect and vulnerable code\nthat causes significant financial loss. To pave the way for research in LLMs'\nhallucinations in code, we introduce Collu-Bench, a benchmark for predicting\ncode hallucinations of LLMs across code generation (CG) and automated program\nrepair (APR) tasks. Collu-Bench includes 13,234 code hallucination instances\ncollected from five datasets and 11 diverse LLMs, ranging from open-source\nmodels to commercial ones. To better understand and predict code\nhallucinations, Collu-Bench provides detailed features such as the per-step log\nprobabilities of LLMs' output, token types, and the execution feedback of LLMs'\ngenerated code for in-depth analysis. In addition, we conduct experiments to\npredict hallucination on Collu-Bench, using both traditional machine learning\ntechniques and neural networks, which achieves 22.03 -- 33.15% accuracy. Our\nexperiments draw insightful findings of code hallucination patterns, reveal the\nchallenge of accurately localizing LLMs' hallucinations, and highlight the need\nfor more sophisticated techniques.",
+    "pdf_url": "http://arxiv.org/pdf/2410.09997v1",
+    "published": "2024-10-13"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "2408.13006v2": {
+    "title": "Systematic Evaluation of LLM-as-a-Judge in LLM Alignment Tasks: Explainable Metrics and Diverse Prompt Templates",
+    "authors": [
+      "Hui Wei",
+      "Shenghua He",
+      "Tian Xia",
+      "Fei Liu",
+      "Andy Wong",
+      "Jingyang Lin",
+      "Mei Han"
+    ],
+    "summary": "LLM-as-a-Judge has been widely applied to evaluate and compare different LLM\nalignmnet approaches (e.g., RLHF and DPO). However, concerns regarding its\nreliability have emerged, due to LLM judges' biases and inconsistent\ndecision-making. Previous research has developed evaluation frameworks to\nassess reliability of LLM judges and their alignment with human preferences.\nHowever, the employed evaluation metrics often lack adequate explainability and\nfail to address LLM internal inconsistency. Additionally, existing studies\ninadequately explore the impact of various prompt templates when applying\nLLM-as-a-Judge methods, leading to potentially inconsistent comparisons between\ndifferent alignment algorithms. In this work, we systematically evaluate\nLLM-as-a-Judge on alignment tasks by defining more theoretically interpretable\nevaluation metrics and explicitly mitigating LLM internal inconsistency from\nreliability metrics. We develop an open-source framework to evaluate, compare,\nand visualize the reliability and alignment of LLM judges, which facilitates\npractitioners to choose LLM judges for alignment tasks. In the experiments, we\nexamine effects of diverse prompt templates on LLM-judge reliability and also\ndemonstrate our developed framework by comparing various LLM judges on two\ncommon alignment datasets (i.e., TL;DR Summarization and HH-RLHF-Helpfulness).\nOur results indicate a significant impact of prompt templates on LLM judge\nperformance, as well as a mediocre alignment level between the tested LLM\njudges and human evaluators.",
+    "pdf_url": "http://arxiv.org/pdf/2408.13006v2",
+    "published": "2024-08-23"
+  },
+  "2410.07069v1": {
+    "title": "ReIFE: Re-evaluating Instruction-Following Evaluation",
+    "authors": [
+      "Yixin Liu",
+      "Kejian Shi",
+      "Alexander R. Fabbri",
+      "Yilun Zhao",
+      "Peifeng Wang",
+      "Chien-Sheng Wu",
+      "Shafiq Joty",
+      "Arman Cohan"
+    ],
+    "summary": "The automatic evaluation of instruction following typically involves using\nlarge language models (LLMs) to assess response quality. However, there is a\nlack of comprehensive evaluation of these LLM-based evaluators across two\ndimensions: the base LLMs and the evaluation protocols. Therefore, we present a\nthorough meta-evaluation of instruction following, including 25 base LLMs and\n15 recently proposed evaluation protocols, on 4 human-annotated datasets,\nassessing the evaluation accuracy of the LLM-evaluators. Our evaluation allows\nus to identify the best-performing base LLMs and evaluation protocols with a\nhigh degree of robustness. Moreover, our large-scale evaluation reveals: (1)\nBase LLM performance ranking remains largely consistent across evaluation\nprotocols, with less capable LLMs showing greater improvement from protocol\nenhancements; (2) Robust evaluation of evaluation protocols requires many base\nLLMs with varying capability levels, as protocol effectiveness can depend on\nthe base LLM used; (3) Evaluation results on different datasets are not always\nconsistent, so a rigorous evaluation requires multiple datasets with\ndistinctive features. We release our meta-evaluation suite ReIFE, which\nprovides the codebase and evaluation result collection for more than 500\nLLM-evaluator configurations, to support future research in\ninstruction-following evaluation.",
+    "pdf_url": "http://arxiv.org/pdf/2410.07069v1",
+    "published": "2024-10-09"
+  },
+  "2309.04369v1": {
+    "title": "Beyond Static Datasets: A Deep Interaction Approach to LLM Evaluation",
+    "authors": [
+      "Jiatong Li",
+      "Rui Li",
+      "Qi Liu"
+    ],
+    "summary": "Large Language Models (LLMs) have made progress in various real-world tasks,\nwhich stimulates requirements for the evaluation of LLMs. Existing LLM\nevaluation methods are mainly supervised signal-based which depends on static\ndatasets and cannot evaluate the ability of LLMs in dynamic real-world\nscenarios where deep interaction widely exists. Other LLM evaluation methods\nare human-based which are costly and time-consuming and are incapable of\nlarge-scale evaluation of LLMs. To address the issues above, we propose a novel\nDeep Interaction-based LLM-evaluation framework. In our proposed framework,\nLLMs' performances in real-world domains can be evaluated from their deep\ninteraction with other LLMs in elaborately designed evaluation tasks.\nFurthermore, our proposed framework is a general evaluation method that can be\napplied to a host of real-world tasks such as machine translation and code\ngeneration. We demonstrate the effectiveness of our proposed method through\nextensive experiments on four elaborately designed evaluation tasks.",
+    "pdf_url": "http://arxiv.org/pdf/2309.04369v1",
+    "published": "2023-09-08"
+  },
+  "2401.16788v1": {
+    "title": "Can Large Language Models be Trusted for Evaluation? Scalable Meta-Evaluation of LLMs as Evaluators via Agent Debate",
+    "authors": [
+      "Steffi Chern",
+      "Ethan Chern",
+      "Graham Neubig",
+      "Pengfei Liu"
+    ],
+    "summary": "Despite the utility of Large Language Models (LLMs) across a wide range of\ntasks and scenarios, developing a method for reliably evaluating LLMs across\nvaried contexts continues to be challenging. Modern evaluation approaches often\nuse LLMs to assess responses generated by LLMs. However, the meta-evaluation\nconducted to assess the effectiveness of these LLMs as evaluators is typically\nconstrained by the coverage of existing benchmarks or requires extensive human\nannotation. This underscores the urgency of methods for scalable\nmeta-evaluation that can effectively, reliably, and efficiently evaluate the\nperformance of LLMs as evaluators across diverse tasks and scenarios,\nparticularly in potentially new, user-defined scenarios. To fill this gap, we\npropose ScaleEval, an agent-debate-assisted meta-evaluation framework that\nleverages the capabilities of multiple communicative LLM agents. This framework\nsupports multi-round discussions to assist human annotators in discerning the\nmost capable LLMs as evaluators, which significantly eases their workload in\ncases that used to require large-scale annotations during meta-evaluation. We\nrelease the code for our framework, which is publicly available at:\n\\url{https://github.com/GAIR-NLP/scaleeval}.",
+    "pdf_url": "http://arxiv.org/pdf/2401.16788v1",
+    "published": "2024-01-30"
+  },
+  "2412.15487v2": {
+    "title": "Multi-LLM Text Summarization",
+    "authors": [
+      "Jiangnan Fang",
+      "Cheng-Tse Liu",
+      "Jieun Kim",
+      "Yash Bhedaru",
+      "Ethan Liu",
+      "Nikhil Singh",
+      "Nedim Lipka",
+      "Puneet Mathur",
+      "Nesreen K. Ahmed",
+      "Franck Dernoncourt",
+      "Ryan A. Rossi",
+      "Hanieh Deilamsalehy"
+    ],
+    "summary": "In this work, we propose a Multi-LLM summarization framework, and investigate\ntwo different multi-LLM strategies including centralized and decentralized. Our\nmulti-LLM summarization framework has two fundamentally important steps at each\nround of conversation: generation and evaluation. These steps are different\ndepending on whether our multi-LLM decentralized summarization is used or\ncentralized. In both our multi-LLM decentralized and centralized strategies, we\nhave k different LLMs that generate diverse summaries of the text. However,\nduring evaluation, our multi-LLM centralized summarization approach leverages a\nsingle LLM to evaluate the summaries and select the best one whereas k LLMs are\nused for decentralized multi-LLM summarization. Overall, we find that our\nmulti-LLM summarization approaches significantly outperform the baselines that\nleverage only a single LLM by up to 3x. These results indicate the\neffectiveness of multi-LLM approaches for summarization.",
+    "pdf_url": "http://arxiv.org/pdf/2412.15487v2",
+    "published": "2024-12-20"
+  }
+}
