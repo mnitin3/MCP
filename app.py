@@ -1,78 +1,47 @@
-import streamlit as st
+# pip install -U 'autogen-ext[mcp]' json-schema-to-pydantic>=0.2.2
+# uv tool install mcp-server-fetch
+# verify it in path by running uv tool update-shell
 import asyncio
-import nest_asyncio
-from mcp_client import MCP_ChatBot  # assumes mcp_client.py is in the same folder
+from autogen_ext.models.openai import OpenAIChatCompletionClient
+from autogen_ext.tools.mcp import StdioServerParams, mcp_server_tools
+from autogen_agentchat.agents import AssistantAgent
+from autogen_agentchat.teams import RoundRobinGroupChat
+from autogen_agentchat.conditions import MaxMessageTermination, TextMentionTermination
+from autogen_core import CancellationToken
+from autogen_agentchat.ui import Console
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-nest_asyncio.apply()
+# Load environment variables
+openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_base_url = os.getenv("OPENAI_BASE_URL")
 
-# Streamlit app
-st.set_page_config(page_title="MCP Chatbot", layout="wide")
-st.title("🤖 MCP Chatbot with Tool Calling")
+if not openai_api_key or not openai_base_url:
+    raise ValueError("OpenAI API key or base URL is not set. Please check your environment variables.")
 
-# Initialize chatbot session once
-@st.cache_resource
-def init_chatbot():
-    chatbot = MCP_ChatBot()
-    asyncio.run(chatbot.connect_to_server_and_run())
-    return chatbot
+async def main() -> None:
+    # Setup server params for local filesystem access
+    fetch_mcp_server = StdioServerParams(command="uvx", args=["mcp-server-fetch"], env=None)
+    tools = await mcp_server_tools(fetch_mcp_server)
 
-chatbot = init_chatbot()
+    # Setup research server params and tools
+    research_mcp_server = StdioServerParams(command="uv", args=["run", "research_server.py"], env=None)
+    research_tools = await mcp_server_tools(research_mcp_server)
 
-# Session state to store chat messages
-if "messages" not in st.session_state:
-    st.session_state["messages"] = []
+    # Create agents for each server
+    model_client = OpenAIChatCompletionClient(model="gpt-4o", api_key=openai_api_key, base_url=openai_base_url)
+    agent = AssistantAgent(name="fetcher", model_client=model_client, tools=tools, reflect_on_tool_use=True)  # type: ignore
+    researcher = AssistantAgent(name="researcher", model_client=model_client, tools=research_tools, reflect_on_tool_use=True)  # type: ignore
 
-# Display conversation
-for msg in st.session_state.messages:
-    with st.chat_message(msg["role"]):
-        st.markdown(msg["content"])
+    termination = MaxMessageTermination(
+        max_messages=5) | TextMentionTermination("TERMINATE")
 
-# Input
-if prompt := st.chat_input("Enter your query..."):
-    with st.chat_message("user"):
-        st.markdown(prompt)
-    st.session_state.messages.append({"role": "user", "content": prompt})
+    team = RoundRobinGroupChat([agent, researcher], termination_condition=termination)
+    #  team.dump_component().model_dump()
 
-    async def handle_query():
-        # Override process_query to store and return messages
-        messages = [{'role': 'user', 'content': prompt}]
-        tools = chatbot.available_tools
-        output = ""
-
-        while True:
-            response = chatbot.client.chat.completions.create(
-                model="gpt-4",
-                messages=messages,
-                tools=tools,
-                tool_choice="auto",
-                temperature=0.0,
-                max_tokens=2000
-            )
-
-            message = response.choices[0].message
-
-            if message.tool_calls:
-                import json
-                for tool_call in message.tool_calls:
-                    tool_name = tool_call.function.name
-                    tool_args = json.loads(tool_call.function.arguments)
-                    tool_id = tool_call.id
-
-                    result = await chatbot.session.call_tool(tool_name, arguments=tool_args)
-
-                    messages.append({"role": "assistant", "tool_calls": [tool_call]})
-                    messages.append({
-                        "role": "tool",
-                        "tool_call_id": tool_id,
-                        "content": result.content
-                    })
-            else:
-                output = message.content
-                messages.append({"role": "assistant", "content": output})
-                return output
-
-    response_text = asyncio.run(handle_query())
-
-    with st.chat_message("assistant"):
-        st.markdown(response_text)
-    st.session_state.messages.append({"role": "assistant", "content": response_text})
+    await Console(team.run_stream(task="Summarize the content of https://newsletter.victordibia.com/p/you-have-ai-fatigue-thats-why-you", cancellation_token=CancellationToken()))
+    await Console(team.run_stream(task="Analyze the MSFT stock based on last week data.", cancellation_token=CancellationToken()))
+    
+if __name__ == "__main__":
+    asyncio.run(main())
