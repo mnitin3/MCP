@@ -146,6 +146,59 @@ def get_stock_data(ticker: str, period: str = "6mo", interval: str = "1d") -> di
     except Exception as e:
         return {"error": str(e)}
 
+@mcp.tool()
+def peform_stock_analysis(stock_prices_data: dict) -> str:
+    """
+    Perform stock analysis on the given stock prices data fetch using the get_stock_data tool.
+
+    Args:
+    ----------
+    stock_prices_data : dict
+        Dictionary containing historical stock prices data.
+
+    Returns:
+    -------
+    str
+        Analysis results as a string.
+    """
+    print("Performing stock analysis...")
+    if not openai_api_key or not openai_base_url:
+        return "OpenAI API key or base URL is not set. Please check your environment variables."
+    try:
+        if not stock_prices_data:
+            return "No historical data available for analysis."
+        client = OpenAI(api_key=openai_api_key, base_url=openai_base_url)
+        system_prompt = f"""You are a financial analyst. You are given stock prices data and you need to analyze it and provide insights.
+                            The data includes:
+                                            - Current price
+                                            - Previous close
+                                            - Market cap
+                                            - PE ratio
+                                            - EPS
+                                            - Dividend yield
+                                            - Historical data (date, open, high, low, close, volume)
+                            Please provide a detailed analysis of the stock performance, trends, and any recommendations.
+
+                            Stock prices data:
+                            {stock_prices_data}
+                        """
+        messages = [
+            {'role': 'user', 'content': system_prompt}
+        ]
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=messages,
+            temperature=0.0,
+            max_tokens=2000,
+            timeout=180
+        )
+        response = response.choices[0].message
+        return response.content
+
+    except Exception as e:
+        return f"Error during analysis: {str(e)}"
+
+
 if __name__ == "__main__":
     # Initialize and run the server
     mcp.run(transport='stdio')
